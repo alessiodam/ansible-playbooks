@@ -1,8 +1,8 @@
 - name: Update and Upgrade APT Packages
   hosts: all
   become: yes
+  become_method: sudo
   tasks:
     - name: Update the apt cache
       apt:
         update_cache: yes
-      become: yes
